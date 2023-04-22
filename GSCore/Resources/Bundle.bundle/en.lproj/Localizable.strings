@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  GSCore
+
+  Created by Noah Little on 21/4/2023.
+  
+*/
+
+"Add_Repo" = "Add repo";
+"Appearance" = "Appearance";
+"Behaviour" = "Behaviour";
+"Configure_Looks" = "Configure the looks of the tweak";
+"Configure_Functionality" = "Configure the functionality provided by the tweak";
+"What_The_Problem" = "What's the problem?";
+"Respring" = "Respring";
+"Confirm" = "Confirm";
+"Cancel" = "Cancel";
+"Enabled" = "Enabled";
+"Enable_Disable_Tweak" = "Enable/Disable the tweak";
+"Apply_Changes" = "Respring to apply changes";

@@ -1,0 +1,16 @@
+//
+//  module.modulemap
+//  GSCore
+//
+//  Created by Noah Little on 18/4/2023.
+//
+
+framework module GSCore {
+    umbrella header "GSCore.h"
+
+    private header "FBSSystemService.h"
+    private header "SBIconController.h"
+
+    export *
+    module * { export * }
+}

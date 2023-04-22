@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  GSCore
+
+  Created by Noah Little on 21/4/2023.
+  
+*/
+
+"Add_Repo" = "添加软件源";
+"Appearance" = "外观";
+"Behaviour" = "特征模块";
+"Configure_Looks" = "调整外观";
+"Configure_Functionality" = "调整特征模块";
+"What_The_Problem" = "请描述问题";
+"Respring" = "重启SpringBoard";
+"Confirm" = "确定";
+"Cancel" = "取消";
+"Enabled" = "启动";
+"Enable_Disable_Tweak" = "启动或关闭插件";
+"Apply_Changes" = "重启来运用所有调整";

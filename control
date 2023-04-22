@@ -1,0 +1,9 @@
+Package: com.ginsu.gscore
+Name: GSCore ${PKG_NAME_SUFFIX}
+Architecture: ${PKG_ARCHITECTURE}
+Description: Environment and communication between my tweaks
+Maintainer: Ginsu
+Author: Ginsu
+Section: Tweaks
+Depends: dev.theos.orion14, firmware (>= 14.0)
+Version: ${VERSION}
