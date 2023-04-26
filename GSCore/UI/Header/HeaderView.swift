@@ -131,7 +131,8 @@ struct HeaderView_Previews: PreviewProvider {
 
 private extension Image {
     init(name: String) {
-        let image = UIImage(contentsOfFile: "\(Directory.bundle.rawValue)Images/\(name).png") ?? UIImage(systemName: "questionmark.circle")!
+        let image = UIImage(contentsOfFile: "\(Directory.bundle.rawValue)Images/\(name).png".rootify)
+        ?? UIImage(systemName: "questionmark.circle")!
         self.init(uiImage: image.withRenderingMode(.alwaysTemplate))
     }
 }
