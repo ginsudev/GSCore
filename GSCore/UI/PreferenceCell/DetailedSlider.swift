@@ -8,7 +8,15 @@
 import SwiftUI
 
 public struct DetailedSlider: View {
-    @Binding var value: Double
+    @State
+    private var isVisibleTextField = false
+    
+    @State
+    private var customValue: String
+    
+    @Binding
+    var value: Double
+    
     let range: ClosedRange<Double>
     let title: String
     
@@ -18,6 +26,7 @@ public struct DetailedSlider: View {
         title: String
     ) {
         self._value = value
+        self._customValue = .init(wrappedValue: "\(value.wrappedValue)")
         self.range = range
         self.title = title
     }
@@ -29,20 +38,57 @@ public struct DetailedSlider: View {
                 Spacer()
                 Text(String(format: "%.1f", value))
                     .foregroundColor(.secondary)
+                Image(systemName: isVisibleTextField
+                      ? "keyboard.chevron.compact.down"
+                      : "keyboard"
+                )
+                .onTapGesture {
+                    isVisibleTextField.toggle()
+                }
             }
-            Slider(
-                value: $value,
-                in: range
-            ) {
-                Text(title)
-            } minimumValueLabel: {
-                Text(String(format: "%.1f", range.lowerBound))
-            } maximumValueLabel: {
-                Text(String(format: "%.1f", range.upperBound))
+            
+            if isVisibleTextField {
+                textField
+            } else {
+                slider
             }
-            .foregroundColor(.secondary)
         }
         .padding(.vertical, 5)
+    }
+}
+
+private extension DetailedSlider{
+    var slider: some View {
+        Slider(
+            value: $value,
+            in: range
+        ) {
+            Text(title)
+        } minimumValueLabel: {
+            Text(String(format: "%.1f", range.lowerBound))
+        } maximumValueLabel: {
+            Text(String(format: "%.1f", range.upperBound))
+        }
+        .foregroundColor(.secondary)
+    }
+    
+    var textField: some View {
+        Group {
+            if #available(iOS 15, *) {
+                TextField("\(value)", text: $customValue)
+                    .onSubmit {
+                        isVisibleTextField = false
+                    }
+            } else {
+                TextField("\(value)", text: $customValue)
+            }
+        }
+        .onChange(of: customValue) { newValue in
+            guard let castedValue = Double(newValue),
+                  range.contains(castedValue)
+            else { return }
+            self.value = castedValue
+        }
     }
 }
 

@@ -8,6 +8,11 @@
 #ifndef GSCore_h
 #define GSCore_h
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+@interface UIDevice (GSCore)
++ (BOOL)_hasHomeButton;
++ (BOOL)currentIsIPad;
+@end
 
 #endif /* GSCore_h */

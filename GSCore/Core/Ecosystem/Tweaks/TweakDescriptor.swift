@@ -7,29 +7,44 @@
 
 import Foundation
 
-internal protocol TweakDescriptor {
-    var dylibName: String { get }
-    var prefsName: String { get }
+// MARK: - Declaration
+
+public protocol TweakDescriptor {
+    var tweak: Ecosystem.Tweak { get }
 }
 
-internal protocol TweakProperties {
+public protocol TweakProperties {
     associatedtype KeyEnum: RawRepresentable where KeyEnum.RawValue: StringProtocol
 }
 
+// MARK: - Internal
+
 internal extension TweakDescriptor {
-    var prefsURL: URL {
-        if #available(iOS 16, *) {
-            return .init(filePath: Directory.prefs.rawValue + prefsName)
-        } else {
-            return .init(fileURLWithPath: Directory.prefs.rawValue + prefsName)
-        }
-    }
-    
     var prefsDict: [String: AnyHashable] {
         prefsURL.plistDict()
     }
-    
+}
+
+// MARK: - Public
+
+public extension TweakDescriptor {
+    var isInstalledAndEnabled: Bool {
+        Ecosystem.isInstalled(tweak: tweak) && isEnabled
+    }
+}
+
+// MARK: - Private
+
+private extension TweakDescriptor {
     var isEnabled: Bool {
         prefsDict["isEnabled"] as? Bool ?? false
+    }
+    
+    var prefsURL: URL {
+        if #available(iOS 16, *) {
+            return .init(filePath: tweak.prefsPath)
+        } else {
+            return .init(fileURLWithPath: tweak.prefsPath)
+        }
     }
 }

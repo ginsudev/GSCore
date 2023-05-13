@@ -41,7 +41,7 @@ private extension HeaderView {
             .foregroundColor(
                 colorScheme == .dark
                 ? Colors.darkCellBackground
-                : Colors.white
+                : .white
             )
             .shadow(radius: 8)
     }

@@ -135,7 +135,7 @@ private extension PreferenceCell {
             .foregroundColor(
                 colorScheme == .dark
                 ? Colors.darkCellBackground
-                : Colors.white
+                : .white
             )
     }
 }

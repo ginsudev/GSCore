@@ -35,7 +35,7 @@ public struct SearchableListView: View {
     
     private var visibleEntries: [String] {
         guard !searchQuery.isEmpty else { return strings }
-        return strings.filter { $0.contains(searchQuery) }
+        return strings.filter { $0.lowercased().contains(searchQuery.lowercased()) }
     }
 }
 

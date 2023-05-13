@@ -4,7 +4,7 @@ ROOTLESS ?= 0
 ARCHS = arm64 arm64e
 THEOS_DEVICE_IP = localhost -p 2222
 INSTALL_TARGET_PROCESSES = SpringBoard
-PACKAGE_VERSION = 1.0.1
+PACKAGE_VERSION = 1.0.2
 
 # Rootless / Rootful settings
 ifeq ($(ROOTLESS),1)

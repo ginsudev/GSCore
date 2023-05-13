@@ -32,7 +32,7 @@ public struct DetailedNavigationLinkGroupView<Content: DetailedLinkDisplayable &
             .foregroundColor(
                 colorScheme == .dark
                 ? Colors.darkCellBackground
-                : Colors.white
+                : .white
             )
     }
 }

@@ -48,6 +48,10 @@
 		4F80F0F929E032BB00F3A6F6 /* CheckmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F80F0F829E032BB00F3A6F6 /* CheckmarkView.swift */; };
 		4F80F0FB29E0465000F3A6F6 /* PreferenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F80F0FA29E0465000F3A6F6 /* PreferenceCell.swift */; };
 		4FEE73DD2A073EC300D28261 /* SearchableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEE73DC2A073EC300D28261 /* SearchableListView.swift */; };
+		4FEE74092A0E45FA00D28261 /* Tweak+Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEE74082A0E45FA00D28261 /* Tweak+Preferences.swift */; };
+		4FEE740B2A0E4C0700D28261 /* Ecosystem+Tweak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEE740A2A0E4C0700D28261 /* Ecosystem+Tweak.swift */; };
+		4FEE740E2A0E577C00D28261 /* GlobalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEE740D2A0E577C00D28261 /* GlobalState.swift */; };
+		4FEE74102A0FAF7B00D28261 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEE740F2A0FAF7B00D28261 /* UIDevice+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +99,10 @@
 		4F80F0F829E032BB00F3A6F6 /* CheckmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkView.swift; sourceTree = "<group>"; };
 		4F80F0FA29E0465000F3A6F6 /* PreferenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceCell.swift; sourceTree = "<group>"; };
 		4FEE73DC2A073EC300D28261 /* SearchableListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableListView.swift; sourceTree = "<group>"; };
+		4FEE74082A0E45FA00D28261 /* Tweak+Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tweak+Preferences.swift"; sourceTree = "<group>"; };
+		4FEE740A2A0E4C0700D28261 /* Ecosystem+Tweak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ecosystem+Tweak.swift"; sourceTree = "<group>"; };
+		4FEE740D2A0E577C00D28261 /* GlobalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalState.swift; sourceTree = "<group>"; };
+		4FEE740F2A0FAF7B00D28261 /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +137,7 @@
 			children = (
 				4F64C08A29CE961E00DB4B54 /* Tweaks.swift */,
 				4F64C09129CEACBF00DB4B54 /* TweakDescriptor.swift */,
+				4FEE74082A0E45FA00D28261 /* Tweak+Preferences.swift */,
 			);
 			path = Tweaks;
 			sourceTree = "<group>";
@@ -139,6 +148,7 @@
 				4F3AA1F729F2A8B200D511BD /* Tweaks */,
 				4F64C08E29CE982D00DB4B54 /* Directory.swift */,
 				4F64C07829C6E01F00DB4B54 /* Ecosystem.swift */,
+				4FEE740A2A0E4C0700D28261 /* Ecosystem+Tweak.swift */,
 			);
 			path = Ecosystem;
 			sourceTree = "<group>";
@@ -182,6 +192,7 @@
 		4F3AA20329F38BBC00D511BD /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				4FEE740C2A0E575200D28261 /* GlobalState */,
 				4F3AA20229F3617C00D511BD /* Facade */,
 				4F3AA1E329EEA63700D511BD /* ApplicationService */,
 				4F3AA20629F39C7000D511BD /* DeviceService */,
@@ -258,6 +269,7 @@
 				4F80F0F629E0041B00F3A6F6 /* Collection+Extensions.swift */,
 				4F3AA20029F3611F00D511BD /* UIImage+Extensions.swift */,
 				4F3AA20429F39A1300D511BD /* UIColor+Extensions.swift */,
+				4FEE740F2A0FAF7B00D28261 /* UIDevice+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -331,6 +343,14 @@
 				4FEE73DC2A073EC300D28261 /* SearchableListView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4FEE740C2A0E575200D28261 /* GlobalState */ = {
+			isa = PBXGroup;
+			children = (
+				4FEE740D2A0E577C00D28261 /* GlobalState.swift */,
+			);
+			path = GlobalState;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,6 +443,8 @@
 				4F64C07929C6E01F00DB4B54 /* Ecosystem.swift in Sources */,
 				4F3AA20C29F3A6F800D511BD /* PreferenceCell.Type.swift in Sources */,
 				4F64C0D429D012C300DB4B54 /* DetailedNavigationLinkGroupView.swift in Sources */,
+				4FEE74102A0FAF7B00D28261 /* UIDevice+Extensions.swift in Sources */,
+				4FEE740E2A0E577C00D28261 /* GlobalState.swift in Sources */,
 				4F80F0F729E0041B00F3A6F6 /* Collection+Extensions.swift in Sources */,
 				4F64C0D629D0195A00DB4B54 /* Colors.swift in Sources */,
 				4F64C0C229CFDB7E00DB4B54 /* Bundle+GSCore.swift in Sources */,
@@ -448,8 +470,10 @@
 				4F64C08029C6ED3E00DB4B54 /* HeaderView.swift in Sources */,
 				4F3AA20E29F3B35300D511BD /* RoundedCorner.swift in Sources */,
 				4F3AA20829F39CDD00D511BD /* DeviceService.swift in Sources */,
+				4FEE74092A0E45FA00D28261 /* Tweak+Preferences.swift in Sources */,
 				4F64C09229CEACBF00DB4B54 /* TweakDescriptor.swift in Sources */,
 				4F64C0D029D009C500DB4B54 /* DetailedNavigationLink.swift in Sources */,
+				4FEE740B2A0E4C0700D28261 /* Ecosystem+Tweak.swift in Sources */,
 				4F80F0F929E032BB00F3A6F6 /* CheckmarkView.swift in Sources */,
 				4F80F0FB29E0465000F3A6F6 /* PreferenceCell.swift in Sources */,
 				4F80F0F329DFDC3E00F3A6F6 /* SegmentedImagePicker.swift in Sources */,
