@@ -37,7 +37,7 @@ public extension TweakDescriptor {
 
 private extension TweakDescriptor {
     var isEnabled: Bool {
-        prefsDict["isEnabled"] as? Bool ?? false
+        prefsDict["isEnabled"] as? Bool ?? true
     }
     
     var prefsURL: URL {

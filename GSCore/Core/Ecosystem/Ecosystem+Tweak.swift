@@ -35,18 +35,18 @@ public extension Ecosystem {
         
         var prefsName: String {
             switch self {
-            case .androBar: return "androbar".id
-            case .dockSearch: return "docksearch".id
-            case .dualclock2: return "dualclock2".id
-            case .dodo: return "dodo".id
-            case .ramUnderTime: return "ramundertime".id
+            case .androBar: return "androbar".pref
+            case .dockSearch: return "docksearch".pref
+            case .dualclock2: return "dualclock2".pref
+            case .dodo: return "dodo".pref
+            case .ramUnderTime: return "ramundertime".pref
             }
         }
     }
 }
 
 fileprivate extension String {
-    var id: Self {
-        "com.ginsu." + self
+    var pref: Self {
+        "com.ginsu." + self + ".plist"
     }
 }
