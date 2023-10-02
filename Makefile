@@ -4,7 +4,7 @@ ROOTLESS ?= 0
 ARCHS = arm64 arm64e
 THEOS_DEVICE_IP = localhost -p 2222
 INSTALL_TARGET_PROCESSES = SpringBoard
-PACKAGE_VERSION = 1.0.3
+PACKAGE_VERSION = 1.0.4
 
 # Rootless / Rootful settings
 ifeq ($(ROOTLESS),1)
@@ -41,9 +41,6 @@ before-package::
 	# Move to staging dir
 	$(ECHO_NOTHING)mkdir -p $(THEOS_STAGING_DIR)$(GSCORE_INSTALL_PATH)$(ECHO_END)
 	$(ECHO_NOTHING)mv $(THEOS_OBJ_DIR)/GSCore.framework/ $(THEOS_STAGING_DIR)$(GSCORE_INSTALL_PATH)$(ECHO_END)
-	
-	# Sign
-	$(ECHO_NOTHING)ldid -Sentitlements.xml $(THEOS_STAGING_DIR)$(GSCORE_INSTALL_PATH)/GSCore.framework/GSCore$(ECHO_END)
 
 	# Copy to theos/lib
 	$(ECHO_NOTHING)rm -rf $(MOVE_TO_THEOS_PATH)GSCore.framework/$(ECHO_END)

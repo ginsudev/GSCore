@@ -9,6 +9,7 @@
 #define GSCore_h
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface UIDevice (GSCore)
 + (BOOL)_hasHomeButton;

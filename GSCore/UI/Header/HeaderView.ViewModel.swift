@@ -71,12 +71,10 @@ private extension HeaderView.ViewModel {
         guard let url = author.profilePictureURL else { throw URLError(.badURL) }
         
         imageLoader.fetchImage(url: url)
-            .sink { _ in
-                
-            } receiveValue: { image in
-                if let image {
-                    self.authorImage = image
-                }
+            .replaceError(with: UIImage(systemName: "person.fill"))
+            .compactMap { $0 }
+            .sink { [weak self] in
+                self?.authorImage = $0
             }
             .store(in: &bag)
     }

@@ -10,6 +10,7 @@ framework module GSCore {
 
     private header "FBSSystemService.h"
     private header "SBIconController.h"
+    private header "CLLocationManager+Private.h"
 
     export *
     module * { export * }

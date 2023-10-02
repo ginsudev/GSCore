@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F0619B72A62606200818977 /* LocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0619B62A62606200818977 /* LocationProvider.swift */; };
+		4F0619B92A6261DD00818977 /* CLLocationManager+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F0619B82A6261DD00818977 /* CLLocationManager+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4F3AA1E529EEA66100D511BD /* FBSSystemService.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F3AA1E429EEA66100D511BD /* FBSSystemService.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4F3AA1E729EEA6BA00D511BD /* _FBSSystemService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3AA1E629EEA6BA00D511BD /* _FBSSystemService.m */; };
 		4F3AA1EB29EEA9AE00D511BD /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3AA1EA29EEA9AE00D511BD /* ApplicationService.swift */; };
@@ -55,6 +57,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F0619B62A62606200818977 /* LocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationProvider.swift; sourceTree = "<group>"; };
+		4F0619B82A6261DD00818977 /* CLLocationManager+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CLLocationManager+Private.h"; sourceTree = "<group>"; };
 		4F3AA1E429EEA66100D511BD /* FBSSystemService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBSSystemService.h; sourceTree = "<group>"; };
 		4F3AA1E629EEA6BA00D511BD /* _FBSSystemService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _FBSSystemService.m; sourceTree = "<group>"; };
 		4F3AA1EA29EEA9AE00D511BD /* ApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
@@ -116,6 +120,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F0619B52A62602400818977 /* LocationProvider */ = {
+			isa = PBXGroup;
+			children = (
+				4F0619B62A62606200818977 /* LocationProvider.swift */,
+				4F0619B82A6261DD00818977 /* CLLocationManager+Private.h */,
+			);
+			path = LocationProvider;
+			sourceTree = "<group>";
+		};
 		4F3AA1E329EEA63700D511BD /* ApplicationService */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +205,7 @@
 		4F3AA20329F38BBC00D511BD /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				4F0619B52A62602400818977 /* LocationProvider */,
 				4FEE740C2A0E575200D28261 /* GlobalState */,
 				4F3AA20229F3617C00D511BD /* Facade */,
 				4F3AA1E329EEA63700D511BD /* ApplicationService */,
@@ -362,6 +376,7 @@
 			files = (
 				4F3AA1FB29F35E4A00D511BD /* SBIconController.h in Headers */,
 				4F74206529EC06150037893D /* GSCore.h in Headers */,
+				4F0619B92A6261DD00818977 /* CLLocationManager+Private.h in Headers */,
 				4F3AA1E529EEA66100D511BD /* FBSSystemService.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,6 +493,7 @@
 				4F80F0FB29E0465000F3A6F6 /* PreferenceCell.swift in Sources */,
 				4F80F0F329DFDC3E00F3A6F6 /* SegmentedImagePicker.swift in Sources */,
 				4F3AA1FF29F35F7300D511BD /* _SBIconController.m in Sources */,
+				4F0619B72A62606200818977 /* LocationProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +516,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				ARCHS = (
 					arm64,
 					arm64e,
@@ -538,6 +555,10 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -570,6 +591,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				ARCHS = (
 					arm64,
 					arm64e,
@@ -608,6 +630,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -633,14 +659,15 @@
 		4F64C07629C6DD4200DB4B54 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				ARCHS = (
 					arm64,
 					arm64e,
 				);
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
@@ -648,6 +675,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -665,7 +696,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -680,14 +711,15 @@
 		4F64C07729C6DD4200DB4B54 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				ARCHS = (
 					arm64,
 					arm64e,
 				);
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -696,6 +728,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -713,7 +749,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
