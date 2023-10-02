@@ -38,9 +38,11 @@ before-package::
 		-e 's/\$${PKG_NAME_SUFFIX}/$(PKG_NAME_SUFFIX)/g' \
 		$(THEOS_STAGING_DIR)/DEBIAN/control$(ECHO_END)
 	
+ifeq ($(ROOTLESS),1)
 	# Move to staging dir
 	$(ECHO_NOTHING)mkdir -p $(THEOS_STAGING_DIR)$(GSCORE_INSTALL_PATH)$(ECHO_END)
 	$(ECHO_NOTHING)mv $(THEOS_OBJ_DIR)/GSCore.framework/ $(THEOS_STAGING_DIR)$(GSCORE_INSTALL_PATH)$(ECHO_END)
+endif
 
 	# Copy to theos/lib
 	$(ECHO_NOTHING)rm -rf $(MOVE_TO_THEOS_PATH)GSCore.framework/$(ECHO_END)
