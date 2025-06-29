@@ -49,6 +49,7 @@
 		4F80F0F729E0041B00F3A6F6 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F80F0F629E0041B00F3A6F6 /* Collection+Extensions.swift */; };
 		4F80F0F929E032BB00F3A6F6 /* CheckmarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F80F0F829E032BB00F3A6F6 /* CheckmarkView.swift */; };
 		4F80F0FB29E0465000F3A6F6 /* PreferenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F80F0FA29E0465000F3A6F6 /* PreferenceCell.swift */; };
+		4F871D302E10FA53001D4784 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F871D2F2E10FA49001D4784 /* Preferences.swift */; };
 		4FEE73DD2A073EC300D28261 /* SearchableListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEE73DC2A073EC300D28261 /* SearchableListView.swift */; };
 		4FEE74092A0E45FA00D28261 /* Tweak+Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEE74082A0E45FA00D28261 /* Tweak+Preferences.swift */; };
 		4FEE740B2A0E4C0700D28261 /* Ecosystem+Tweak.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEE740A2A0E4C0700D28261 /* Ecosystem+Tweak.swift */; };
@@ -102,6 +103,7 @@
 		4F80F0F629E0041B00F3A6F6 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		4F80F0F829E032BB00F3A6F6 /* CheckmarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkView.swift; sourceTree = "<group>"; };
 		4F80F0FA29E0465000F3A6F6 /* PreferenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceCell.swift; sourceTree = "<group>"; };
+		4F871D2F2E10FA49001D4784 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		4FEE73DC2A073EC300D28261 /* SearchableListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableListView.swift; sourceTree = "<group>"; };
 		4FEE74082A0E45FA00D28261 /* Tweak+Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tweak+Preferences.swift"; sourceTree = "<group>"; };
 		4FEE740A2A0E4C0700D28261 /* Ecosystem+Tweak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ecosystem+Tweak.swift"; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				4F3AA1F929F2A96300D511BD /* Resources */,
 				4F3AA1F829F2A8C600D511BD /* Ecosystem */,
 				4F64C08729CE8FB100DB4B54 /* Author.swift */,
+				4F871D2F2E10FA49001D4784 /* Preferences.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				4F3AA20A29F3A07300D511BD /* AlertRespringButton.swift in Sources */,
 				4F80F0E729DEDFCF00F3A6F6 /* DetailedSlider.swift in Sources */,
 				4F80F0E529DEDF5C00F3A6F6 /* SubtitleText.swift in Sources */,
+				4F871D302E10FA53001D4784 /* Preferences.swift in Sources */,
 				4F64C07D29C6E4FF00DB4B54 /* ImageLoader.swift in Sources */,
 				4F64C08029C6ED3E00DB4B54 /* HeaderView.swift in Sources */,
 				4F3AA20E29F3B35300D511BD /* RoundedCorner.swift in Sources */,
