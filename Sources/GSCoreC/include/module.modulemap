@@ -1,0 +1,4 @@
+module GSCoreC {
+    umbrella "."
+    export *
+}
