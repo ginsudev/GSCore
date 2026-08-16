@@ -7,7 +7,7 @@
 
 import Foundation
 import Combine
-import GSCoreC
+@_implementationOnly import GSCoreC
 
 // MARK: - Public
 

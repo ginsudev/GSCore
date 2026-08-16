@@ -1,9 +1,12 @@
-ROOTLESS ?= 0
+# For arm64e backward compatible support.
+export THEOS_PLATFORM_SDK_ROOT = /Applications/Xcode-15.4.0.app/Contents/Developer
+export PREFIX = $(THEOS_PLATFORM_SDK_ROOT)/Toolchains/XcodeDefault.xctoolchain/usr/bin/
 
+ROOTLESS ?= 0
 ARCHS = arm64 arm64e
 INSTALL_TARGET_PROCESSES = SpringBoard
-TARGET = iphone:clang:26.5:16.5
-PACKAGE_VERSION = 2.0.0
+TARGET = iphone:clang:16.5:14.5
+PACKAGE_VERSION = 2.0.1
 
 # Rootless / Rootful settings
 ifeq ($(ROOTLESS),1)

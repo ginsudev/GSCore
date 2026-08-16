@@ -5,5 +5,5 @@ Description: Environment and communication between my tweaks
 Maintainer: Ginsu
 Author: Ginsu
 Section: Tweaks
-Depends: firmware (>= 16.0)
+Depends: firmware (>= 14.0)
 Version: 1.0.0

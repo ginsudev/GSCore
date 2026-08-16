@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import GSCoreC
+@_implementationOnly import GSCoreC
 
 // MARK: - Public
 

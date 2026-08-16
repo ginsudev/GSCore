@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import GSCoreC
+@_implementationOnly import GSCoreC
 
 extension UIImage {
     

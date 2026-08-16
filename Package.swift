@@ -62,6 +62,7 @@ let cxxFlags: [String] = [
 
 let swiftFlags: [String] = libFlags + [
     "-target", triple, "-sdk", sdk, "-resource-dir", resourceDir,
+    "-enable-library-evolution"
 ]
 
 let package = Package(

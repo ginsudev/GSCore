@@ -6,7 +6,7 @@
 //
 
 import UIKit.UIDevice
-import GSCoreC
+@_implementationOnly import GSCoreC
 
 extension UIDevice {
     
